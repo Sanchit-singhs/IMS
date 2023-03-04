@@ -4,27 +4,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventory Management system</title>
+    <style>
+        p {
+            text-decoration: solid;
+            font-size: large;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    
+        #article_id {
+            text-align: center;
+        }
+    </style>
+    
 </head>
 <body>
     <header>
-        <h1><a href="/">My inventory</a></h1>
+        <h1 style="text-align: center; font-size: 50px;"><a href="/" style="color: rgb(127, 157, 255);">My inventory</a></h1>
     </header>
 
-    <article>
+    <article id="article_id">
         
         <h2><a href="">USERS</a></h2>
         {% for inventory in inventories %}
-        <article style="margin-left: 10px;">
-            <h2><a href="">{{ inventory.first_name }}</a></h2>
+        <article>
+            <h2><a href=""> {{ inventory.user_id }}.  {{ inventory.first_name}} {{ inventory.last_name }}</a></h2>
             <p>{{ inventory.email |linebreaksbr }}</p>
+            <p>{{ inventory.phone_number |linebreaksbr }}</p>
+            <p>{{ inventory.address |linebreaksbr }}</p>
         </article>
         {% endfor %}
     </article>
 
-    <article>
-        
-        <h2><a href="">Orders</a></h2>
-        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-    </article>
 </body>
 </html>
