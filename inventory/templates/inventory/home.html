@@ -2,10 +2,8 @@
     {% block content %}
         {% for inventory in inventories %}
         <article>
-            <h2><a href=""> {{ inventory.user_id }}.  {{ inventory.first_name}} {{ inventory.last_name }}</a></h2>
+            <h2><a href="{% url 'user_detail' pk=inventory.pk %}"> {{ inventory.user_id }}.  {{ inventory.first_name}} {{ inventory.last_name }}</a></h2>
             <p>{{ inventory.email |linebreaksbr }}</p>
-            <p>{{ inventory.phone_number |linebreaksbr }}</p>
-            <p>{{ inventory.address |linebreaksbr }}</p>
         </article>
         {% endfor %}
     {% endblock %}

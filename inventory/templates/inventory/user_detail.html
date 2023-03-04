@@ -1,0 +1,11 @@
+{% extends 'inventory/base.html' %}  
+    {% block content %}
+        <article>
+            {% if post.first_name %}
+                <h2><a href="">{{ post.first_name }}</a></h2>
+            {% endif %}
+            <p>{{ post.email |linebreaksbr }}</p>
+            <p>{{ post.phone_number |linebreaksbr }}</p>
+            <p>{{ post.address |linebreaksbr }}</p>
+        </article>
+    {% endblock %}
