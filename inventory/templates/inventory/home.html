@@ -12,8 +12,13 @@
 
     <article>
         
-        <h2><a href="">Products</a></h2>
-        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <h2><a href="">USERS</a></h2>
+        {% for inventory in inventories %}
+        <article style="margin-left: 10px;">
+            <h2><a href="">{{ inventory.first_name }}</a></h2>
+            <p>{{ inventory.email |linebreaksbr }}</p>
+        </article>
+        {% endfor %}
     </article>
 
     <article>
