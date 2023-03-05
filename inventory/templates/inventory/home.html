@@ -6,4 +6,5 @@
             <p>{{ inventory.email |linebreaksbr }}</p>
         </article>
         {% endfor %}
+        <button style="background-color: blue; color: white; border: none; padding: 10px;"><a href="{% url 'add_new' %}" style="text-decoration: none; color: white;">Add User</a></button>
     {% endblock %}
